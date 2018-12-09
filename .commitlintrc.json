@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "@commitlint/config-conventional",
+    "@commitlint/config-lerna-scopes"
+  ],
+  "rules": {
+    "type-enum": [
+      2,
+      "always",
+      [
+        "WIP",
+        "feat",
+        "fix",
+        "docs",
+        "chore",
+        "style",
+        "refactor",
+        "test",
+        "perf",
+        "revert"
+      ]
+    ],
+    "type-case": [0, "always", "lower-case"]
+  }
+}

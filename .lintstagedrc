@@ -1,0 +1,4 @@
+{
+  "*.js": ["eslint --fix", "git add"],
+  "*.ts": ["tslint --project tsconfig.json --format stylish --fix", "git add"]
+}
