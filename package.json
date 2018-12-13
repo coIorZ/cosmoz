@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "gc": "git-cz",
-    "test": "jest"
+    "test": "jest",
+    "ci": "ci"
   },
   "husky": {
     "hooks": {
