@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "gc": "git-cz",
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "ci": "ci",
+    "postinstall": "lerna bootstrap --hoist"
   },
   "husky": {
     "hooks": {
@@ -15,7 +17,7 @@
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
     "@commitlint/config-lerna-scopes": "^7.2.1",
-    "@instructure/cz-lerna-changelog": "^5.35.0",
+    "@cosmoz/cz-lerna": "0.0.2",
     "@types/jest": "^23.3.10",
     "commitizen": "^3.0.5",
     "eslint": "^5.9.0",
@@ -37,7 +39,11 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/@instructure/cz-lerna-changelog"
+      "path": "./node_modules/@cosmoz/cz-lerna"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coIorZ/cosmoz.git"
   }
 }

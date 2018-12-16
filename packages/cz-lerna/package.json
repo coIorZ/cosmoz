@@ -1,0 +1,21 @@
+{
+  "name": "@cosmoz/cz-lerna",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@semantic-release/commit-analyzer": "^5.0.5",
+    "chalk": "^2.4.1",
+    "cz-customizable": "^5.2.0",
+    "inquirer-autocomplete-prompt": "^0.12.2"
+  },
+  "peerDependencies": {
+    "lerna": "^3.5.1"
+  }
+}
