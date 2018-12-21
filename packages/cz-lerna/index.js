@@ -70,11 +70,16 @@ function getChangedPackages() {
   return [];
 }
 
+function removeScope(name) {
+  return name.replace(/^@[^/]+\//, '');
+}
+
 function makePrompter() {
   return function (cz, commit) {
-    const prefix = '@cosmoz';
-    const changedPackages = getChangedPackages().map(pkg => pkg.name.replace(`${prefix}/`, ''));
-    const packageNames = getPackages().map(pkg => pkg.name.replace(`${prefix}/`, ''));
+    const changedPackages = exports
+      .getChangedPackages()
+      .map(exports.removeScope);
+    const packageNames = exports.getPackages().map(exports.removeScope);
     const questions = makeDefaultQuestions(packageNames, changedPackages);
 
     // eslint-disable-next-line no-console
@@ -116,7 +121,7 @@ function makePrompter() {
   };
 }
 
-module.exports = {
-  prompter: makePrompter(),
-  makePrompter,
-};
+exports.prompter = makePrompter();
+exports.getChangedPackages = getChangedPackages;
+exports.getPackages = getPackages;
+exports.removeScope = removeScope;
