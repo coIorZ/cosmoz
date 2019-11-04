@@ -17,7 +17,7 @@ else
 fi
 
 # install brew packages
-brew_pkgs="vim python ruby zsh git n ack fzf zsh-autosuggestions zsh-syntax-highlighting htop tmux"
+brew_pkgs="vim python ruby zsh git n ack fzf fd zsh-autosuggestions zsh-syntax-highlighting htop tmux"
 pp "Installing homebrew packages"
 for brew_pkg in $brew_pkgs
 do

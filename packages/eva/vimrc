@@ -163,7 +163,7 @@ let g:jsx_ext_required=0 " Allow JSX in normal JS files
 
 " Ack
 """"""""""""""""""""""""""""""
-nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>a :Ack! -i<Space>
 let g:ack_mappings={'o': '<CR><C-W><C-W>:ccl<CR>'}
 
 " Signify
