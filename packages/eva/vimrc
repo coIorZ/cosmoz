@@ -163,7 +163,7 @@ let g:jsx_ext_required=0 " Allow JSX in normal JS files
 
 " Ack
 """"""""""""""""""""""""""""""
-nnoremap <Leader>a :Ack! -i<Space>
+nnoremap <Leader>a :Ack! -i -Q<Space>
 let g:ack_mappings={'o': '<CR><C-W><C-W>:ccl<CR>'}
 
 " Signify
@@ -252,7 +252,7 @@ let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 
 " IndentGuide
 """"""""""""""""""""""""""""""
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 let g:indent_guides_default_mapping = 0
